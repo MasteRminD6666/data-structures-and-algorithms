@@ -56,12 +56,8 @@ HINT: Beware... JS default is "Lexical" ordering.
 
 const sortNumbers = (arr) => {
   // Solution code here...
-  const sortedArray = arr.sort((element1, element2) => {
-    if (element1 < element2) {
-      return -1
-    }
-  })
-  return sortedArray
+  let lowestFirst = arr.sort((num1, num2) => num1 - num2);
+  return lowestFirst
 };
 
 /* ------------------------------------------------------------------------------------------------
