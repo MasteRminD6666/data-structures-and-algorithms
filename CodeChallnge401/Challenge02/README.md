@@ -2,7 +2,7 @@
 
 ## array-insert-shift
 
-![Whiteboard](https://raw.githubusercontent.com/MasteRminD6666/data-structures-and-algorithms/main/CodeChallnge401/Challenge02/cc02.PNG)
+![Whiteboard](https://raw.githubusercontent.com/MasteRminD6666/data-structures-and-algorithms/main/CodeChallnge401/Challenge02/code%2002.PNG)
 
 ## CODE 
 
