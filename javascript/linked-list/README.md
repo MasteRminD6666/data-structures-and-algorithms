@@ -7,8 +7,7 @@
 - Define a method called toString (or **str** in Python) which takes in no arguments and returns a string representing all the values in the Linked List, formatted as:
   "{ a } -> { b } -> { c } -> NULL"
 
-## Approach & Efficiency
-
+## Approach 
 1. insert: O(1).
 1. includes: O(n).
 1. toString: O(n).
