@@ -66,6 +66,42 @@ class LinkedList {
     console.log('=============================', solution); 
     return solution;
   }
+  insertBefore(newValue, value) {
+    const node = new Node(newValue);
+    let pointer = this.head;
+
+    if (value == this.head.value) {
+      node.next = this.head;
+      this.head = node;
+    } else {
+
+      while (pointer) {
+        if (pointer.next.value == value) {
+          node.next = pointer.next;
+          pointer.next = node;
+          break;
+        }
+        pointer = pointer.next;
+      }
+    }
+  }
+
+
+  insertAfter(newValue, value) {
+    let node = new Node(newValue);
+    let pointer = this.head;
+
+    while (pointer) {
+
+      if (pointer.value == value) {
+        node.next = pointer.next;
+        pointer.next = node;
+        break;
+      }
+      pointer = pointer.next;
+    }
+  }
+
 
 // got helped from a youtube channel here is the link [https://www.youtube.com/watch?v=9YddVVsdG5A]
 }
