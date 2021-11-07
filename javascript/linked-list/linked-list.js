@@ -20,14 +20,14 @@ class LinkedList {
     // the whole list
     return this;
   }
-
+ 
   insert(value) {
-    let brandNewHeadNode = new Node(value);
+    let headNode = new Node(value);
     if(!this.head) {
-      this.head = brandNewHeadNode;
+      this.head = headNode;
     } else {
-      brandNewHeadNode.next = this.head;
-      this.head = brandNewHeadNode;
+      headNode.next = this.head;
+      this.head = headNode;
     }
     return this;
   }
@@ -67,14 +67,7 @@ class LinkedList {
     return solution;
   }
 
-  // findMiddle() {
-   
-  //   return this;
-  // }
-  // reverse() {
-   
-  //   return this;
-  // }
+// got helped from a youtube channel here is the link [https://www.youtube.com/watch?v=9YddVVsdG5A]
 }
 
 module.exports = LinkedList;
