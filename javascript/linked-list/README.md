@@ -8,9 +8,9 @@
   "{ a } -> { b } -> { c } -> NULL"
 
 ## Approach 
-1. insert: O(1).
-1. includes: O(n).
-1. toString: O(n).
+#### 1. insert: O(1).
+#### 1. includes: O(n).
+#### 1. toString: O(n).
 
 ## Solution
 
