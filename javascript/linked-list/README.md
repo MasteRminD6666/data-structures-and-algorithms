@@ -42,4 +42,7 @@ adds a new node with the given new value immediately after the first node that h
 
 ## Solution-WB
 
-![](https://raw.githubusercontent.com/MasteRminD6666/data-structures-and-algorithms/main/javascript/linked-list/rami.png)
+![](https://raw.githubusercontent.com/MasteRminD6666/data-structures-and-algorithms/main/javascript/linked-list/Capture.PNG)
+
+## Run test
+![](https://raw.githubusercontent.com/MasteRminD6666/data-structures-and-algorithms/main/javascript/linked-list/test%20passed.PNG)
