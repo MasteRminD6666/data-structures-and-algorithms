@@ -90,7 +90,7 @@ class LinkedList {
   insertAfter(newValue, value) {
     let node = new Node(newValue);
     let pointer = this.head;
-
+    //rami zaitoun
     while (pointer) {
 
       if (pointer.value == value) {

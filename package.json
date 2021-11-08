@@ -1,0 +1,23 @@
+{
+  "name": "data-structures-and-algorithms",
+  "version": "1.0.0",
+  "description": "- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MasteRminD6666/data-structures-and-algorithms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MasteRminD6666/data-structures-and-algorithms/issues"
+  },
+  "homepage": "https://github.com/MasteRminD6666/data-structures-and-algorithms#readme",
+  "dependencies": {
+    "jest": "^27.3.1"
+  }
+}
