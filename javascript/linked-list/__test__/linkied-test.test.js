@@ -58,6 +58,68 @@ describe('Linked List TESTING', () => {
     expect(list.toString()).toEqual(null);
   });
 
+  describe('Kth from end', () => {
+
+    it('k is greater than the length of the linked list',()=>{
+      const list = new LL();
+
+      list.append('one');
+      list.append('two');
+      list.append('three');
+      list.append('four');
+      list.insertAfter('rami','four');
+
+      expect(list.kthFromEnd(9)).toBe('Exception');
+    })
+
+    it('k and the length are the same',()=>{
+      const list = new LL();
+
+      list.append('one');
+      list.append('two');
+      list.append('three');
+      list.append('four');
+      list.insertAfter('rami','four');
+
+      expect(list.kthFromEnd(5)).toBe('Exception');
+    })
+
+    it('K is not a positive integer',()=>{
+      const list = new LL();
+
+      list.append('one');
+      list.append('two');
+      list.append('three');
+      list.append('four');
+      list.insertAfter('rami','four');
+
+      expect(list.kthFromEnd(-5)).toBe('Exception');
+    })
+
+    it('Linked list of size 1',()=>{
+      const list = new LL();
+
+      list.insert('one');
+
+      expect(list.kthFromEnd(1)).toBe('Exception');
+      expect(list.kthFromEnd(0)).toBe('one');
+      expect(list.kthFromEnd(-1)).toBe('Exception');
+    })
+
+    it('Happy Path',()=>{
+      const list = new LL();
+
+      list.append('one');
+      list.append('two');
+      list.append('three');
+      list.append('four');
+      list.insertAfter('rami','four');
+
+      expect(list.kthFromEnd(2)).toBe('three');
+
+    })
+
+  });
 
 
 });

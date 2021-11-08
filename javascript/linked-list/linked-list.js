@@ -11,6 +11,7 @@ class LinkedList {
     if(!this.head) {
       this.head = brandNewNode;
     } else {
+      //rami zaitoun
       let current = this.head;
       while(current.next) {
         current = current.next;
@@ -102,7 +103,21 @@ class LinkedList {
     }
   }
 
+  kthFromEnd(k){
 
+    let pointer=this.head;
+    let array = [];
+
+   while(pointer){
+     array.push(pointer.value);
+     pointer = pointer.next;
+   }
+  if (array.length <= k || k < 0){
+    return 'Exception';
+  } else {
+    return array[array.length-1-k]
+  }
+  }
 // got helped from a youtube channel here is the link [https://www.youtube.com/watch?v=9YddVVsdG5A]
 }
 
