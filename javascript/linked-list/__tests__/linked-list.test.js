@@ -3,7 +3,7 @@
 // Require our linked list implementation
 const LinkedLilst = require('../index');
 const LL = require('../linked-list.js');
-
+const zipLists = require('../index').zipLists;
 describe('Linked List', () => {
   it('works', () => {
     expect(true).toBeTruthy();
@@ -64,8 +64,18 @@ describe('Linked List', () => {
     expect(list.toString()).toEqual(null);
   });
 
-
-
+  // it('Zip linked lists',()=>{
+  //   const list1 = new LL();
+  //   const list2 = new LL();
+  //   for(let i=0;i<5;i++){
+  //     list1.append(i);
+  //   }
+  //   for(let i=0;i<5;i++){
+  //     list1.append(i+10);
+  //   }
+  //   expect(zipLists(list1,list2)).toBe('{0} -> {1} -> {2} -> {3} -> {4} -> {10} -> {11} -> {12} -> {13} -> {14}');
+  // })
+  
 });
 
 
