@@ -54,7 +54,14 @@ You have access to the Node class and all the properties on the Linked List clas
 
 
 ## kth from end-wb
-![](https://raw.githubusercontent.com/MasteRminD6666/data-structures-and-algorithms/main/javascript/linked-list/linked-list-rami.png)
+![]()
 
 ## kth from end-TEST 
 ![](https://raw.githubusercontent.com/MasteRminD6666/data-structures-and-algorithms/main/javascript/linked-list/code%2007.PNG)
+
+## Zip linked list 
+![](https://raw.githubusercontent.com/MasteRminD6666/data-structures-and-algorithms/main/javascript/linked-list/linked-list-rami.png)
+
+## Zip from end-TEST 
+![](https://raw.githubusercontent.com/MasteRminD6666/data-structures-and-algorithms/main/javascript/linked-list/code%2007.PNG)
+
