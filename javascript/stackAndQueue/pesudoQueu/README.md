@@ -9,6 +9,8 @@
 - create dequeue function
 - check if stack1 length is equal to zero
 true return null false use the peek function
+
+### PR Link : [Pull-Request](https://github.com/MasteRminD6666/data-structures-and-algorithms/pull/31)
 ## Approach & Efficiency
 
 | **_Queue method_** | Big O |
