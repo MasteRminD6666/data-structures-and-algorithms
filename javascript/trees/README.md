@@ -13,7 +13,7 @@ Binary Tree and BST Implementation
 # wb 
 ![](./assets/wb.jpg)
 # visual 
-![](./assets/nbt4.PNG)
+![](./assets/nbt4.png)
 
 ## New Implementation TEST 
 ## [Pull_Request](https://github.com/MasteRminD6666/data-structures-and-algorithms/pull/35)
