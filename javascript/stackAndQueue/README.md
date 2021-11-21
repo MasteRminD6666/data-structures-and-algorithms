@@ -1,7 +1,7 @@
 # Challenge Summary
 
 stacks and queues
-
+## Author : Rami Zaitoun
 ## Challenge Description
 
 - Create a Node class that has properties for the value stored in the Node, and a pointer to the next node.
@@ -34,6 +34,7 @@ stacks and queues
 ## Solution
 
 ## Structure and Testing
+![Testing](https://github.com/MasteRminD6666/data-structures-and-algorithms/blob/main/javascript/stackAndQueue/solved.PNG?raw=true)
 
 Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge. You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.
 

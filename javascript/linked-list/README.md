@@ -40,9 +40,27 @@ adds a new node with the given new value immediately before the first node that 
 arguments: value, new value
 adds a new node with the given new value immediately after the first node that has the value specified
 
+**kth from end**
+argument: a number, k, as a parameter.
+Return the node’s value that is k places from the tail of the linked list.
+You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
 ## Solution-WB
 
 ![](https://raw.githubusercontent.com/MasteRminD6666/data-structures-and-algorithms/main/javascript/linked-list/Capture.PNG)
 
 ## Run test
 ![](https://raw.githubusercontent.com/MasteRminD6666/data-structures-and-algorithms/main/javascript/linked-list/test%20passed.PNG)
+
+
+## kth from end-wb
+![ kth from end-wb](https://github.com/MasteRminD6666/data-structures-and-algorithms/blob/main/javascript/linked-list/kh%20white.PNG?raw=true)
+
+## kth from end-TEST 
+![](https://raw.githubusercontent.com/MasteRminD6666/data-structures-and-algorithms/main/javascript/linked-list/code%2007.PNG)
+
+## Zip linked list 
+![](https://raw.githubusercontent.com/MasteRminD6666/data-structures-and-algorithms/main/javascript/linked-list/linked-list-rami.png)
+
+
+
