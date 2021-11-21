@@ -5,7 +5,10 @@ Binary Tree and BST Implementation
 # Author: Rami Zaitoun
 
 ## Challenge
+- ***findMax***
 
+# findmax test
+![](./assets/max.PNG)
 ### Node
 
 Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
