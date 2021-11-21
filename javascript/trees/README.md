@@ -15,6 +15,11 @@ Binary Tree and BST Implementation
 # visual 
 ![](./assets/nbt4.PNG)
 
+## New Implementation TEST 
+## [Pull_Request](https://github.com/MasteRminD6666/data-structures-and-algorithms/pull/35)
+
+![](https://github.com/MasteRminD6666/data-structures-and-algorithms/blob/main/javascript/trees/assets/tree.PNG?raw=true)
+
 ### Node
 
 Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
