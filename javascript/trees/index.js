@@ -39,6 +39,22 @@ class BinaryTree {
         shift(this.root);
         return result;
     }
+    findMax() {
+        if (this.root == null) {
+            return ('Cannot get the maximum value of an empty tree');
+        }
+        let max = this.root.value;
+        const show = (node) => {
+            console.log('this is the node rami', node);
+            if (node.value >= max) {
+                max = node.value
+            }
+            if (node.left) show(node.left);
+            if (node.right) show(node.right);
+        }
+        show(this.root);
+        return max;
+    }
 }
 class BinarySearchTree extends BinaryTree {
     constructor(root) {
@@ -82,4 +98,4 @@ class BinarySearchTree extends BinaryTree {
         }
     }
 }
-module.exports={ Node, BinaryTree, BinarySearchTree }
+module.exports = { Node, BinaryTree, BinarySearchTree }
