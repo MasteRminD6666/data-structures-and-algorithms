@@ -5,22 +5,15 @@ Binary Tree and BST Implementation
 # Author: Rami Zaitoun
 
 ## Challenge
-- New Implementation
 - ***findMax***
 
 # findmax test
 ![](./assets/max.PNG)
-=======
 
-
-## New Implementation TEST 
-## [Pull_Request](https://github.com/MasteRminD6666/data-structures-and-algorithms/pull/35)
-
-![](https://github.com/MasteRminD6666/data-structures-and-algorithms/blob/main/javascript/trees/assets/tree.PNG?raw=true)
-
------------------------------
-
-got helped with the testing part from fizo 
+# wb 
+![](./assets/wb.jpg)
+# visual 
+![](./assets/nbt4.PNG)
 
 ### Node
 
