@@ -9,6 +9,12 @@ Binary Tree and BST Implementation
 
 # findmax test
 ![](./assets/max.PNG)
+
+# wb 
+![](./assets/wb.jpg)
+# visual 
+![](./assets/nbt4.PNG)
+
 ### Node
 
 Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
