@@ -6,14 +6,18 @@ Binary Tree and BST Implementation
 
 ## Challenge
 - ***findMax***
+- ***breadthFirst***
 
+
+# breadthFirst
+![](./assets/breadth-test.PNG)
 # findmax test
 ![](./assets/max.PNG)
 
 # wb 
 ![](./assets/wb.jpg)
 # visual 
-![](./assets/nbt4.PNG)
+![](./assets/nbt4.png)
 
 ### Node
 
