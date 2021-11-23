@@ -24,13 +24,13 @@ add(newNode){
     }
 
   function _moveAndAdd(curr){
-        let vacancyCheck = false;
+        let check = false;
         for(let i=1; i<=curr.NoOfChildren;i++){
           if(curr[`child${i}`].value==null){
-            vacancyCheck = true;
+            check = true;
           }
         }
-        if(vacancyCheck){
+        if(check){
               for(let i=1;i<=curr.NoOfChildren;i++){
                 if(curr[`child${i}`].value==null){
                 curr[`child${i}`] = newNode;
