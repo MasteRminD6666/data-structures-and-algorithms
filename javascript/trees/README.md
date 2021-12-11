@@ -6,9 +6,17 @@ Binary Tree and BST Implementation
 
 ## Challenge
 - ***findMax***
+- ***breadthFirst***
+- ***fizzbuzz***
 
+
+# breadthFirst
+![](./assets/breadth-test.PNG)
 # findmax test
 ![](./assets/max.PNG)
+ 
+# FizzBuzz 
+![](./assets/fizzbuzz.PNG)
 
 # wb 
 ![](./assets/wb.jpg)
