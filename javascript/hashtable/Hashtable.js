@@ -1,121 +1,79 @@
 'use strict';
-
 class Node {
-    constructor(val) {
-        this.val = val;
+    constructor(value) {
+        this.value = value;
         this.next = null;
     }
 }
 
-class LL {
+class LinkedList {
     constructor() {
         this.head = null;
+        this.length = 0;
     }
-    add(val) {
-        let node = new Node(val);
-
+    prepend(value) {
+        const node = new Node(value);
         if (!this.head) {
             this.head = node;
+            this.length++;
         } else {
             node.next = this.head;
             this.head = node;
+            this.length++;
         }
-    }
-
-    getList() {
-        if (!this.head) return 'no-list';
-
-        let current = this.head;
-        let counter = 1;
-        let resultsArr = [];
-
-        while (current) {
-
-            resultsArr[counter - 1] = current.val;
-            current = current.next;
-            counter++;
-        }
-
-        return resultsArr;
     }
 }
 
 class Hashmap {
     constructor(size) {
-        this.storage = new Array(size);
         this.size = size;
+        this.storage = new Array(size);
     }
 
-    hash(key) {
-        return key.split('').reduce((acc, curr) => {
-            return acc + curr.charCodeAt(0);
-        }, 0) * 19 % this.size;
+    code(key) {
+        const sumCharAsci = key.split('').reduce((acc, char) => {
+            return acc + char.charCodeAt(0);
+        }, 0);
+        return (sumCharAsci * 13) % this.size;
     }
 
-    add(key, val) {
-        let hash = this.hash(key);
-        let getListResult;
-
-        if (!this.storage[hash]) {
-            let ll = new LL();
-            ll.add([key, val]);
-            this.storage[hash] = ll;
+    add(key, value) {
+        const hash = this.code(key);
+        if (this.storage[hash]) {
+            this.storage[hash].prepend({ [key]: value });
         } else {
-            this.storage[hash].add([key, val]);
-            getListResult = this.storage[hash].getList();
-            console.log(` already an entry at hashmap position ${hash} ====>>>>>`, getListResult);
+            const linkList = new LinkedList();
+            linkList.prepend({ [key]: value });
+            this.storage[hash] = linkList;
         }
     }
 
     get(key) {
-        let hash = this.hash(key);
-
-        if (!this.storage[hash]) {
-            console.log('\n no value for that key !!!');
-            return null;
-        } else {
-            let node = this.storage[hash];
-            let thisNode = node.head;
-            let result = [];
-
-            while (thisNode) {
-                if (thisNode.val[0] === key) {
-                    result.push(`for the key '${key}' we found ${thisNode.val[0]}: ${thisNode.val[1]}`);
+        const hash = this.code(key);
+        if (this.storage[hash]) {
+            if (this.storage[hash].length > 1) {
+                let node = this.storage[hash].head;
+                while (node) {
+                    if (node.value[key]) return node.value[key];
+                    node = node.next;
                 }
-                thisNode = thisNode.next;
+            } else {
+                return this.storage[hash].head.value[key];
             }
-            return result.length > 0 ? result : `nothing found for key:${key}`;
         }
     }
 
     contains(key) {
-        let hash = this.hash(key);
+        const hash = this.code(key);
+        if (this.storage[hash]) return true;
+        return false;
+    }
 
-        if (!this.storage[hash]) {
-
-            return false;
-        } else {
-            let node = this.storage[hash];
-            let thisNode = node.head;
-
-            while (thisNode) {
-                if (thisNode.val[0] === key) {
-
-                    return true;
-                }
-                thisNode = thisNode.next;
-            }
-
-            return false;
-        }
+    hash(key) {
+        const hash = this.code(key);
+        return this.storage[hash] ? hash : new Error('key does not exist');
     }
 }
-
-let hashmap = new Hashmap(10);
-
-hashmap.add('rami', 'test');
-console.log('getting ... rami', hashmap.get('rami'));
-console.log(hashmap.contains('rami'));
 
 
 module.exports = Hashmap;
