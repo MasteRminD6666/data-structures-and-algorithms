@@ -28,9 +28,11 @@ class PseudoQueue {
     }
     // TODO check how to do it in another way 
 }
-// const rami = new PseudoQueue()
-// console.log('test1', rami.enqueue(1));
-// console.log('test2', rami.enqueue(2));
-// console.log('test3', rami.enqueue(3));
+const rami = new PseudoQueue()
+console.log('test1', rami.enqueue(1));
+console.log('test2', rami.enqueue(2));
+console.log('test3', rami.enqueue(3));
+// console.log('test3', rami.dequeue(3));
+// console.log('final', rami);
 
 module.exports = PseudoQueue;
