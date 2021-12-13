@@ -73,6 +73,32 @@ class Hashmap {
         const hash = this.code(key);
         return this.storage[hash] ? hash : new Error('key does not exist');
     }
+    repeatedWord(string) {
+        const array = string.split(' ');
+        let repeated = '';
+        let skip = false;
+        array.forEach((word) => {
+            if (skip) return;
+
+            word = word.split('');
+            if (word[word.length - 1] === ',') {
+                word.pop();
+                word = word.join('');
+            } else word = word.join('');
+
+            word = word.toLowerCase();
+            const hash = this.code(word);
+            if (!this.storage[hash]) {
+                const linkedList = new LinkedList();
+                linkedList.prepend({ [word]: word });
+                this.storage[hash] = linkedList;
+            } else if (this.storage[hash].head.value[word] == word) {
+                skip = true;
+                return (repeated = word);
+            } else this.storage[hash].prepend({ [word]: word });
+        });
+        return repeated;
+    }
 }
 
 
