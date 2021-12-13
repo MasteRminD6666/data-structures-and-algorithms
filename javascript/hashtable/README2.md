@@ -8,10 +8,10 @@
 # Author : Rami Zaitoun
 ## Whiteboard Process
 
-![challenge-30]()
+![challenge-30](https://github.com/MasteRminD6666/data-structures-and-algorithms/blob/main/javascript/hashtable/__test__/assets/wb-rpeated.jpg)
 
 # Testing 
-![test]()
+![test](https://github.com/MasteRminD6666/data-structures-and-algorithms/blob/main/javascript/hashtable/__test__/assets/Hashtest.PNG)
 ## Approach & Efficiency
 
 ### Approach
