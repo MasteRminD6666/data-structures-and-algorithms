@@ -47,4 +47,25 @@ describe('Hash Map', () => {
         expect(hashMap.hash('two')).toBe(hashMap.code('two'));
         expect(hashMap.hash('three')).toBe(hashMap.code('three'));
     });
+    
 });
+describe('Hash Map Repeated Words', () => {
+    const case1 = 'Nory was a Catholic because her mother was  Catholic,.';
+    const case2 =
+      'It was the best of times, it was the worst of times, it was the age of wisdom,';
+    const case3 = 'we work hard play hard ';
+    test(' Case 1', () => {
+      const hashMap = new Hashmap(5000);
+      expect(hashMap.repeatedWord(case1)).toBe('was');
+    });
+  
+    test(' Case 2', () => {
+      const hashMap = new Hashmap(5000);
+      expect(hashMap.repeatedWord(case2)).toBe('it');
+    });
+  
+    test(' Case 3', () => {
+      const hashMap = new Hashmap(5000);
+      expect(hashMap.repeatedWord(case3)).toBe('hard');
+    });
+  });
