@@ -132,6 +132,19 @@ class Hashmap {
         return arr;
     }
 }
+function leftJoin(lMap, rMap) {
+    const result = [];
+    for (let i in lMap.storage) {
+        result.push(Object.entries(lMap.storage[i].head.value)[0]);
+    }
+    for (let i in result) {
+        if (rMap.get(result[i][0])) {
+            result[i].push(rMap.get(result[i][0]));
+        } else {
+            result[i].push('null');
+        }
+    }
+    return result;
+}
 
-
-module.exports = Hashmap;
+module.exports = { Hashmap, leftJoin };
