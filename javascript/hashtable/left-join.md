@@ -1,5 +1,6 @@
 # HashMap Left Join
 
+# Author : Rami Zaitoun
 
 ## Challenge
 
@@ -20,7 +21,13 @@ Time:
 Space:
 
 - O(n)
+- 
+### Whiteboard
 
+![left-join](https://github.com/MasteRminD6666/data-structures-and-algorithms/blob/main/javascript/hashtable/__test__/assets/leftJoin.jpg)
+
+# Testing 
+![testing](https://github.com/MasteRminD6666/data-structures-and-algorithms/blob/main/javascript/hashtable/__test__/assets/lefttest.PNG)
 ## Solution
 
 ```
@@ -41,9 +48,6 @@ function leftJoin(lMap, rMap) {
 
 ```
 
-### Whiteboard
+got helped from somone on github
 
-![left-join](javascript\hashtable\__test__\assets\leftJoin.jpg)
-
-# Testing 
-![testing](javascript\hashtable\__test__\assets\lefttest.PNG)
+[github](https://gist.github.com/robotlolita/8208773)
