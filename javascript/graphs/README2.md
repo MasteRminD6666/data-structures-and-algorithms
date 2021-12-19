@@ -7,8 +7,6 @@ Write the following method for the Graph class:
 - Display the collection
 # wb 
 
-![whiteboard]('./wb.jpg')
+![whiteboard](https://raw.githubusercontent.com/MasteRminD6666/data-structures-and-algorithms/main/javascript/graphs/wb.jpg)
 
-# Struggle with the testing
-
-# and that's where i reached 
+# Struggled with the testing part this is a really hard challnge =(
