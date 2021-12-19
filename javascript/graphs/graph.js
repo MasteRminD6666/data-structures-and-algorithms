@@ -1,3 +1,6 @@
+const { Queue } = require('../../javascript/stackAndQueue/queue/Queue');
+
+
 class Edge {
     constructor(vertex, weight = 0) {
         this.vertex = vertex;
@@ -65,6 +68,20 @@ class Graph {
         }
         return sum;
     }
+    breadthFirstTraversal(rootNode) {
+        const queue = new Queue();
+        const visited = [];
+    
+        queue.enqueue(rootNode);
+        visited.push(rootNode);
+    
+        while (!queue.isEmpty()) {
+          let currentNode = queue.dequeue();
+          visited.push(currentNode);
+        }
+    
+        // Need to check on algorithm for moving through graph
+      }
 }
 
 module.exports = { Graph, Vertex };
