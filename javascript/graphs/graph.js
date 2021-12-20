@@ -1,87 +1,114 @@
-const { Queue } = require('../../javascript/stackAndQueue/queue/Queue');
+'use strict';
 
+class Vertex {
+    constructor(value) {
+        this.value = value;
+    }
+}
 
 class Edge {
-    constructor(vertex, weight = 0) {
+    constructor(vertex, weight) {
         this.vertex = vertex;
         this.weight = weight;
     }
 }
-class Vertex {
-    constructor(value) {
-      this.value = value;
-    }
-  }
-  
+
 
 class Graph {
     constructor() {
-        this._adjacencyList = new Map();
+        this.adjacencyList = new Map();
     }
 
-    addVertex(vertex) {
-        // we need to add the vertex to the adjacency list and set an empty array for the edges
-        return this._adjacencyList.set(vertex, []);
+    addVertex(value) {
+        let payload = new Vertex(value);
+        this.adjacencyList.set(payload, []);
+
+        return payload;
     }
 
-    addDirectedEdge(startVertex, endVertex) {
-        if (!this._adjacencyList.has(startVertex) || !this._adjacencyList.has(endVertex)) {
-            throw new Error('Invalid vertex');
+    addDirectedEdge(startVertex, endVertex, weight = 0) {
+
+        if (
+            !this.adjacencyList.has(startVertex) &&
+            !this.adjacencyList.has(endVertex)
+        ) {
+            throw new Error('Vertex Error');
         }
-        const adjacencies = this._adjacencyList.get(startVertex);
-        adjacencies.push(new Edge(endVertex));
+        let neighbors = this.adjacencyList.get(startVertex);
+        let newEdge = new Edge(endVertex, weight);
+        neighbors.push(newEdge);
     }
 
-    printAll() {
-        for (const [vertex, edge] of this._adjacencyList.entries()) {
-            console.log('print-vertex', vertex);
-            console.log('print-edge', edge);
+    getNeighbors(vertex) {
+        if (!this.adjacencyList.has(vertex)) {
+            throw new Error('GET NEIGHBOR ERROR :: Invalid vertex');
         }
+
+        return [...this.adjacencyList.get(vertex)];
     }
 
-    getVertexes() {
-        let collection = [];
-        for (const [vertex] of this._adjacencyList.entries()) {
-            collection.push(vertex);
-        }
-        return collection;
-    }
+    breadthFirst(startVertex) {
+        const queue = [];
+        const visitedNodes = new Set();
 
-    getEdges() {
-        let collection = [];
-        for (const [vartex, edge] of this._adjacencyList.entries()) {
-            if (edge.length > 0) {
-                if (edge.length > 1) {
-                    edge.forEach((e, i) => collection.push(`${vartex.value} with ${e.vertex.value}`));
+        queue.push(startVertex);
+        visitedNodes.add(startVertex);
+
+        while (queue.length) {
+            const current = queue.shift();
+
+            let neighbors = this.getNeighbors(current);
+
+            for (let edge of neighbors) {
+                let neighbor = edge.vertex;
+
+                if (!visitedNodes.has(neighbor)) {
+                    queue.push(neighbor);
+                    visitedNodes.add(neighbor);
                 } else {
-                    collection.push(`${vartex.value} with ${edge[0].vertex.value}`);
+                    continue;
                 }
             }
         }
-        return collection;
+
+        return visitedNodes;
+    }
+
+    getNodes() {
+        return this.adjacencyList;
     }
 
     size() {
-        let sum = 0;
-        for (const vertex of this._adjacencyList.keys()) {
-            sum++;
+        if (this.adjacencyList.size === 0) {
+            return null;
+        } else {
+            return this.adjacencyList.size;
         }
-        return sum;
     }
-    breadthFirstTraversal(rootNode) {
-        const queue = new Queue();
-        const visited = [];
-    
-        queue.enqueue(rootNode);
-        visited.push(rootNode);
-    
-        while (!queue.isEmpty()) {
-          let currentNode = queue.dequeue();
-          visited.push(currentNode);
-        }
-    
-        // Need to check on algorithm for moving through graph
-      }
 }
 
-module.exports = { Graph, Vertex };
+let graph = new Graph();
+
+let A = graph.addVertex('A');
+let B = graph.addVertex('B');
+let C = graph.addVertex('C');
+let D = graph.addVertex('D');
+let E = graph.addVertex('E');
+let F = graph.addVertex('F');
+let G = graph.addVertex('G');
+let H = graph.addVertex('H');
+
+graph.addDirectedEdge(A, D);
+graph.addDirectedEdge(A, C);
+graph.addDirectedEdge(A, B);
+graph.addDirectedEdge(D, F);
+graph.addDirectedEdge(B, C);
+graph.addDirectedEdge(B, E);
+graph.addDirectedEdge(C, F);
+graph.addDirectedEdge(C, E);
+graph.addDirectedEdge(C, B);
+graph.addDirectedEdge(F, G);
+graph.addDirectedEdge(G, H);
+graph.addDirectedEdge(H, F);
+
+module.exports = Graph;
