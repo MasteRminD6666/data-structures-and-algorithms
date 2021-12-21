@@ -29,6 +29,6 @@ Big O time complexity:
 
 
 # Resource 
-[](https://www.youtube.com/watch?v=cWNEl4HE2OE)
+[Youtube](https://www.youtube.com/watch?v=cWNEl4HE2OE)
 
 
